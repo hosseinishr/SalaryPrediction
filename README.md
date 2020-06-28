@@ -22,7 +22,12 @@ This dataframe has no duplicates.
 #### Step 5: Summarising numerical and categorical variables separately (slide 11 of the report.pdf)
 #### Step 6: Merging features and target of training dataframe into a single dataframe (slide 12 of the report.pdf)
 #### Step 7: Visualising the target variable (Salary) (slide 13 - 14 of the report.pdf)
-![Salary visualisation](/images/visualising the salary.png)
+![Salary visualisation](/images/salaryVisualisation.png)
+#### Step 8: Dealing with the outliers (slide 16 - 22 of the report.pdf)
+* Outliers on the left (zero salaries) are missing/corrupt data, and hence were excluded from the dataframe.
+* Inspection of the outliers on the right (hihg salaries) shows that these are primarily in oil, finance and web industries. Also, most of them have advanced degrees. Hence, these are genuine correct data since these industries have high salaries even though in their Junior roles. Hence, these data are true outliers and will not be dropped from the dataset.
+#### Step 9: Plot all the features separately (slide 23 - 30 of the report.pdf)
+
 
 ## Develop models
 ## Deploy the best model
