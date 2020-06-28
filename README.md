@@ -22,7 +22,7 @@ This dataframe has no duplicates.
 #### Step 5: Summarising numerical and categorical variables separately (slide 11 of the report.pdf)
 #### Step 6: Merging features and target of training dataframe into a single dataframe (slide 12 of the report.pdf)
 #### Step 7: Visualising the target variable (Salary) (slide 13 - 14 of the report.pdf)
-
+![Salary visualisation](/images/visualising the salary.png)
 
 ## Develop models
 ## Deploy the best model
