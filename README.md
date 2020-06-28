@@ -27,10 +27,10 @@ This dataframe has no duplicates.
 * Outliers on the left (zero salaries) are missing/corrupt data, and hence were excluded from the dataframe.
 * Inspection of the outliers on the right (high salaries) shows that these are primarily in oil, finance and web industries. Also, most of them have advanced degrees. Hence, these are genuine correct data since these industries have high salaries even though in their Junior roles. Hence, these data are true outliers and will not be dropped from the dataset.
 ### Step 9: Plot all the features separately (slides 23 - 30 of the report.pdf)
-![Salary plot](/images/SalaryPlot.png)
+![Salary plot](/images/SalaryPlot.png)  
 It can be observed that all the features except 'companyId' has a degree of correlation with 'salary' and are predictors of it. Hence, 'companyId' is excluded from the training dataset.
 ### Step 10: Identification of correlation between all the features and target (slides 31 - 32 of the report.pdf)
-![map of features](/images/featuresMap.png)
+![map of features](/images/featuresMap.png)  
 As was expected from Step 9, all the features except 'companyId' have impact/correlation with the target, i.e. salary.
 
 ## Develop models
@@ -50,7 +50,7 @@ The value of Mean Squared Error (MSE) for the selected models are:
 
 ## Deploy the best model
 The **Gradient Boosting Regressor** with the value of MSE of 313.10 is considered as the best model.
-![important features](/images/importantFeatures.png)
+![important features](/images/importantFeatures.png)  
 The following features are the key predictors (have the most importance/impact on the value of the salary):
 * group_mean
 * yearsExperience
