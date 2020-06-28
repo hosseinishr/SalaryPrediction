@@ -50,6 +50,12 @@ The value of Mean Squared Error (MSE) for the selected models are:
 
 ## Deploy the best model
 The **Gradient Boosting Regressor** with the value of MSE of 313.10 is considered as the best model.
-
+![important features](/images/importantFeatures.png)
+The following features are the key predictors (have the most importance/impact on the value of the salary):
+* group_mean
+* yearsExperience
+* milesFromMetropolis
 
 ## Next steps
+* Feature engineering can be extended to also consider ‘yearsExperience’ and ‘milesFromMetropolis’.
+* The performance of the models could have been improved having further features in the original dataset, i.e. ‘recruitType’ (‘contract’ or ‘permanent’), ‘contractType’ (‘full-time’, ‘part-time’), etc.
