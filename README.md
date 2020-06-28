@@ -27,7 +27,9 @@ This dataframe has no duplicates.
 * Outliers on the left (zero salaries) are missing/corrupt data, and hence were excluded from the dataframe.
 * Inspection of the outliers on the right (hihg salaries) shows that these are primarily in oil, finance and web industries. Also, most of them have advanced degrees. Hence, these are genuine correct data since these industries have high salaries even though in their Junior roles. Hence, these data are true outliers and will not be dropped from the dataset.
 #### Step 9: Plot all the features separately (slide 23 - 30 of the report.pdf)
-
+![Salary plot](/images/SalaryPlot.png)
+It can be observed that all the features except 'jobId' has a degree of correlation with 'salary' and are predictors of it. Hence, 'jobId' is excluded from the training dataset.
+#### Step 10: Identification of correlation between all the features and target (slide 31 - 32 of the report.pdf)
 
 ## Develop models
 ## Deploy the best model
