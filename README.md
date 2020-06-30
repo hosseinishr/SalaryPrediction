@@ -56,6 +56,6 @@ The following features are the key predictors (have the most importance/impact o
 * yearsExperience
 * milesFromMetropolis
 
-## Next steps
+## Model improvement
 * Feature engineering can be extended to also consider ‘yearsExperience’ and ‘milesFromMetropolis’.
 * The performance of the models could have been improved having further features in the original dataset, i.e. ‘recruitType’ (‘contract’ or ‘permanent’), ‘contractType’ (‘full-time’, ‘part-time’), etc.
