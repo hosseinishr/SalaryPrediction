@@ -147,32 +147,43 @@ Inspection of these suspicious entries shows that these are primarily in oil, fi
 * The target variable ('salary') is correlated to all the features except 'companyId'. The correlation with 'companyId' is very weak compared to the rest of the features.
 * There is some degree of correlation between 'major' and 'degree'.
 
+## 3- Develop models
+### Feature engineering
+* Feature engineering is implemented to inform the model of some of the similarities in the data and hence to boost the performance of the models.
+* All the salaries that had the same ‘companyId’, ‘jobType’, ‘degree’, ‘major’, and ‘industry’ were grouped.
+* For each aforementioned group, the mean, minimum, maximum, standard deviation and median was calculated as a new dataset with columns: ‘group_mean’, ‘group_min’, ‘group_max’, ‘group_std’ and ‘group_median’ was created.
+* The aforementioned dataset was merged with the original dataset and was considered as the training dataset.
+* It was carefully noticed that the features that are engineered on the training set are also applicable to the test dataset.
 
-![map of features](/images/featuresMap.png)  
-As was expected from Step 9, all the features except 'companyId' have impact/correlation with the target, i.e. salary.
-
-## Develop models
-### Feature engineering (slide 33 of the report.pdf)
-In order to boost the performance of the models, all the salaries that had the same ‘companyId’, ‘jobType’, ‘degree’, ‘major’, and ‘industry’ were grouped. Then, for each group, the mean, minimum, maximum, standard deviation and median was calculated and added to the training dataset.
-### Selection of the models (slide 34 of the report.pdf)
-* Three regression models were selected to predict the target variable (salary), based on all the features (including the features engineered):
+### Selected models
+* Three regression models were selected to predict the target variable (salary), based on the updated list of features:
   * Linear Regression
   * Random Forest Regressor
   * Gradient Boosting Regressor
-* The Mean Squared Error (MSE) was used as the metric to evaluate and compare the performance of these three models.
-### Performance of the models (slide 35 of the report.pdf)
-The value of Mean Squared Error (MSE) for the selected models are:
-* Linear Regression: 358.17
-* Random Forest Regressor: 313.63
-* Gradient Boosting Regressor: 313.10
+* The Mean Squared Error (MSE) was used as the metric to evaluate and compare the performance of these three models for cross validation purposes.
 
-## Deploy the best model
-The **Gradient Boosting Regressor** with the value of MSE of 313.10 is considered as the best model.
-![important features](/images/importantFeatures.png)  
-The following features are the key predictors (have the most importance/impact on the value of the salary):
-* group_mean
-* yearsExperience
-* milesFromMetropolis
+### Performance of the models
+The value of Mean Squared Error (MSE) for the selected models are:
+* Linear Regression: 358.16
+* Random Forest Regressor: 314.66
+* Gradient Boosting Regressor: 313.11
+
+The **Gradient Boosting Regressor** with the value of MSE of 313.11 was considered as the best model and trained using the whole training set.
+
+## 4- Deploy the best model
+### Prediction of the salaries of the test dataset using the best model (The Gradient Boosting Regressor)
+The trained best model (Gradient Boosting Regressor) was applied to the test set and the salaries were predicted. The whole test data set was overviewed at a high level, and then was saved to a csv file.
+
+<img src="/images/[44].png" width = 1000>
+
+### Visualisation and comparison of the importance of the considered features
+<img src="/images/[47].png" width = 1000>
+
+As can be seen, the following features are the key predictors (have the most importance/impact on the value of the salary):
+
+* group_mean (0.69)
+* yearsExperience (0.15)
+* milesFromMetropolis (0.10)
 
 ## Model improvement
 * Feature engineering can be extended to also consider ‘yearsExperience’ and ‘milesFromMetropolis’.
