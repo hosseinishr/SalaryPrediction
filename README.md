@@ -39,22 +39,115 @@ As was expected:
   * 'yearsExperience'
   * 'milesFromMetropolis'
   * 'salary'
-### Step 3: Checking for duplicates (slide 9 of the report.pdf)
-This dataframe has no duplicates.
-### Step 4: Identification of numerical and categorical features (slide 10 of the report.pdf)
-* Numeric columns: ‘yearsExperience’, ‘milesFromMetropolis’, ‘salary’
-* Categorical columns: ‘jobId’, ‘companyId’, ‘jobType’, ‘degree’, ‘major’, ‘industry’
-### Step 5: Summarising numerical and categorical variables separately (slide 11 of the report.pdf)
-### Step 6: Merging features and target of training dataframe into a single dataframe (slide 12 of the report.pdf)
-### Step 7: Visualising the target variable (Salary) (slides 13 - 14 of the report.pdf)
-![Salary visualisation](/images/salaryVisualisation.png)
-### Step 8: Dealing with the outliers (slides 16 - 22 of the report.pdf)
-* Outliers on the left (zero salaries) are missing/corrupt data, and hence were excluded from the dataframe.
-* Inspection of the outliers on the right (high salaries) shows that these are primarily in oil, finance and web industries. Also, most of them have advanced degrees. Hence, these are genuine correct data since these industries have high salaries even though in their Junior roles. Hence, these data are true outliers and will not be dropped from the dataset.
-### Step 9: Plot all the features separately (slides 23 - 30 of the report.pdf)
-![Salary plot](/images/SalaryPlot.png)  
-It can be observed that all the features except 'companyId' has a degree of correlation with 'salary' and are predictors of it. Hence, 'companyId' is excluded from the training dataset.
-### Step 10: Identification of correlation between all the features and target (slides 31 - 32 of the report.pdf)
+
+<img src="/images/[7].png" width = 800>
+
+The test dataset has 1,000,000 entries, with the same columns as the training dataset.
+
+### Step 3: Checking for duplicates and NaN values
+<img src="/images/[9].png" width = 800>
+
+Both the training dataset and the test dataset have no duplicates.
+
+<img src="/images/[11].png" width = 800>
+
+Both the training dataset and the test dataset have no NaN values, and hence it seems they are nice and clean dataframes.
+
+In case of presence of any duplicates or NaN values, this needed to be investigated further. It should be decided how to handle them, whether or not they should be dropped or be replaced by zero values.
+
+### Step 4: Summarising numerical and categorical variables separately
+<img src="/images/[13].png" width = 800>
+
+The numerical columns have reasonable values and ranges, and there is no need to handle any unexpected data.
+
+<img src="/images/[14].png" width = 800>
+
+* 'jobId' is unique.
+* The rest of the objects are categorical columns.
+
+### Step 5: Visualising the target variable (Salary)
+<img src="/images/[15].png" width = 800>
+
+* The potential outliers need further investigation.
+* The ‘salary’ follows similar to a Normal distribution, with a mean around 120.
+
+### Step 6: Dealing with the outliers
+
+#### Step 6.1: Using Interquartile Range (IQR) rule to identify potential outliers
+<img src="/images/[16].png" width = 800>
+Hence, any data entry that has the salary below 8.5 or above 220.5 is considered as potential outlier and needs to be further investigated.
+
+#### Step 6.2: Examining potential outliers
+This is performed to learn if these outliers are missing, meaningful, and whether to include them in the training set or should they be excluded.
+
+**Outliers below the lower bound**
+<img src="/images/[17].png" width = 800>
+
+Examining these outliers shows that these are instances of missing/corrupt data, since candidates with doctoral or masters degree, in oil, web or finance industries, with some years of experience should earn a salary. Therefore, these will be removed from the dataset later.
+
+**Outliers above the upper bound**
+<img src="/images/[18].png" width = 800>
+
+All these are senior level roles, all the way from CEO down to SENIOR, and it is reasonable that they earn lot of money. However, why candidates in JUNIOR roles should earn high salaries? This needs further investigation to make sure if it is genuine and correct data or should these be dropped from the dataset.
+
+<img src="/images/[19].png" width = 800>
+
+Inspection of these suspicious entries shows that these are primarily in oil, finance and web industries. Also, most of them have advanced degrees. Hence, these are genuine correct data since these industries have high salaries even though in their Junior roles. Hence, these data are true outliers and will not be dropped from the dataset.
+
+#### Step 6.3: Removing data with zero salaries
+<img src="/images/[20].png" width = 800>
+
+### Step 7: Plot all the features separately
+**'companyId'**
+
+<img src="/images/[21].png" width = 800>
+
+**Conclusion:** The straight line shows that this feature is not predictive of the target, meaning the salaries are very weakly associated with these randomly generated numbers.
+
+**'jobType'**
+
+<img src="/images/[22].png" width = 800>
+
+**Conclusion:** This shows that the higher the role, the more salary the person is earning, which is totally reasonable and believable. This feature has definitely impact on the target (salary) and hence will be kept as one of the features in the training dataset.
+
+**'degree'**
+
+<img src="/images/[23].png" width = 800>
+
+**Conclusion:** This shows that the more the degree level, the more salary the person is earning, which is completely acceptable and makes sense. This feature has definitely impact on the target (salary) and hence will be kept as one of the features in the training dataset.
+
+**'major'**
+
+<img src="/images/[24].png" width = 800>
+
+**Conclusion:** Apart from people with NONE degree, the rest of the degrees are earning pretty much the same salary. However, the salaries of engineering, business and maths are slightly higher than other majors. This feature has impact to some extent on the target (salary) and hence will be kept as one of the features in the training dataset.
+
+**'industry'**
+
+<img src="/images/[25].png" width = 800>
+
+**Conclusion:** These 2 observations are reasonable and rational. This shows, as expected, that the oil, finance and web has highest salaries. Also, this shows that different industries have different salaries. This feature has definitely impact on the target (salary) and hence will be kept as one of the features in the training dataset.
+
+**'yearsExperience'**
+
+<img src="/images/[26].png" width = 800>
+
+**Conclusion:** This shows, as expected, that the more experience the person has, the more salary they earn, which is completely genuine and logical. This feature has definitely impact on the target (salary) and hence will be kept as one of the features in the training dataset.
+
+**'milesFromMetropolis'**
+
+<img src="/images/[27].png" width = 800>
+
+**Conclusion:** This shows an inverse relationship between the miles from Metropolis and the salary, which makes perfect sense. This feature has definitely impact on the target (salary) and hence will be kept as one of the features in the training dataset.
+
+### Step 8: Identification of correlation between all the features and target
+<img src="/images/[29].png" width = 1000>
+
+**Conclusions:**
+* The target variable ('salary') is correlated to all the features except 'companyId'. The correlation with 'companyId' is very weak compared to the rest of the features.
+* There is some degree of correlation between 'major' and 'degree'.
+
+
 ![map of features](/images/featuresMap.png)  
 As was expected from Step 9, all the features except 'companyId' have impact/correlation with the target, i.e. salary.
 
