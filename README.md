@@ -81,12 +81,12 @@ Hence, any data entry that has the salary below 8.5 or above 220.5 is considered
 This is performed to learn if these outliers are missing, meaningful, and whether to include them in the training set or should they be excluded.
 
 **Outliers below the lower bound**
-<img src="/images/[17].png" width = 800>
+<img src="/images/[17].png" width = 700>
 
 Examining these outliers shows that these are instances of missing/corrupt data, since candidates with doctoral or masters degree, in oil, web or finance industries, with some years of experience should earn a salary. Therefore, these will be removed from the dataset later.
 
 **Outliers above the upper bound**  
-<img src="/images/[18].png" width = 500>
+<img src="/images/[18].png" width = 700>
 
 All these are senior level roles, all the way from CEO down to SENIOR, and it is reasonable that they earn lot of money. However, why candidates in JUNIOR roles should earn high salaries? This needs further investigation to make sure if it is genuine and correct data or should these be dropped from the dataset.
 
