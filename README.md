@@ -17,10 +17,28 @@ The HR manager needs a model which is developed based on an available dataset to
 * The column ‘jobId’ seems to be a randomly generated number and hence unique.
 * The columns ‘companyId’, ‘jobType’, ‘degree’, ‘major’ and ‘industry’ seem to be categorical columns since there are some repetitions. Therefore, the number of unique categories for each column are expected to be much less than the total number of records.
 
-### Step 2: Inspect more detail of the dataset (slides 7 - 8 of the report.pdf)
-* Total number of records: 1,000,000
-* The object columns are categorical.
-* The integer columns are numeric.
+<img src="/images/[5].png" width = 800>
+
+* It can be seen that the test dataset has the same features as the training dataset. Hence, there is no need to delete any features from the training set.
+
+### Step 2: Inspect more detail of the dataset
+<img src="/images/[6].png" width = 800>
+
+The training dataset has 1,000,000 entries.
+
+As was expected:
+
+* Categorical columns:
+  * ‘companyId’
+  * ‘jobType’
+  * ‘degree’
+  * ‘major’
+  * ‘industry’
+* Numerical columns:
+  * 'jobId'
+  * 'yearsExperience'
+  * 'milesFromMetropolis'
+  * 'salary'
 ### Step 3: Checking for duplicates (slide 9 of the report.pdf)
 This dataframe has no duplicates.
 ### Step 4: Identification of numerical and categorical features (slide 10 of the report.pdf)
