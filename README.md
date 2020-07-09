@@ -22,7 +22,7 @@ The HR manager needs a model which is developed based on an available dataset to
 * It can be seen that the test dataset has the same features as the training dataset. Hence, there is no need to delete any features from the training set.
 
 ### Step 2: Inspect more detail of the dataset
-<img src="/images/[6].png" width = 300>
+<img src="/images/[6].png" width = 350>
 
 The training dataset has 1,000,000 entries.
 
@@ -40,27 +40,27 @@ As was expected:
   * 'milesFromMetropolis'
   * 'salary'
 
-<img src="/images/[7].png" width = 300>
+<img src="/images/[7].png" width = 350>
 
 The test dataset has 1,000,000 entries, with the same columns as the training dataset.
 
 ### Step 3: Checking for duplicates and NaN values
-<img src="/images/[9].png" width = 300>
+<img src="/images/[9].png" width = 250>
 
 Both the training dataset and the test dataset have no duplicates.
 
-<img src="/images/[11].png" width = 300>
+<img src="/images/[11].png" width = 250>
 
 Both the training dataset and the test dataset have no NaN values, and hence it seems they are nice and clean dataframes.
 
 In case of presence of any duplicates or NaN values, this needed to be investigated further. It should be decided how to handle them, whether or not they should be dropped or be replaced by zero values.
 
 ### Step 4: Summarising numerical and categorical variables separately
-<img src="/images/[13].png" width = 300>
+<img src="/images/[13].png" width = 350>
 
 The numerical columns have reasonable values and ranges, and there is no need to handle any unexpected data.
 
-<img src="/images/[14].png" width = 300>
+<img src="/images/[14].png" width = 350>
 
 * 'jobId' is unique.
 * The rest of the objects are categorical columns.
@@ -86,7 +86,7 @@ This is performed to learn if these outliers are missing, meaningful, and whethe
 Examining these outliers shows that these are instances of missing/corrupt data, since candidates with doctoral or masters degree, in oil, web or finance industries, with some years of experience should earn a salary. Therefore, these will be removed from the dataset later.
 
 **Outliers above the upper bound**
-<img src="/images/[18].png" width = 800>
+<img src="/images/[18].png" width = 400>
 
 All these are senior level roles, all the way from CEO down to SENIOR, and it is reasonable that they earn lot of money. However, why candidates in JUNIOR roles should earn high salaries? This needs further investigation to make sure if it is genuine and correct data or should these be dropped from the dataset.
 
