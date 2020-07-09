@@ -13,6 +13,7 @@ The HR manager needs a model which is developed based on an available dataset to
 ## 2- Discover the data through EDA (Exploratory Data Analysis)
 ### Step 1: Examining and high level overviewing the data
 <img src="/images/[4].png" width = 800>
+
 * The column ‘jobId’ seems to be a randomly generated number and hence unique.
 * The columns ‘companyId’, ‘jobType’, ‘degree’, ‘major’ and ‘industry’ seem to be categorical columns since there are some repetitions. Therefore, the number of unique categories for each column are expected to be much less than the total number of records.
 
