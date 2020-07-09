@@ -8,7 +8,7 @@
 The HR manager of a company wants to assign salaries to different posts within the company at the time of publicly advertising the posts. It is crucial that the salaries are within acceptable ranges for the benefit of the company so that the resources of company are not wasted.
 
 ### The goal
-The HR manager needs a model which is developed based on an available dataset to help them predict the salary of every post, in order to spend the resources of the company efficiently and create revenue for the company in the long term.\n TEST
+The HR manager needs a model which is developed based on an available dataset to help them predict the salary of every post, in order to spend the resources of the company efficiently and create revenue for the company in the long term.   TEST
 ## Discover the data through EDA (Exploratory Data Analysis)
 ### Step 1: Examining and high level overviewing the data (slides 5 - 6 of the report.pdf)
 ### Step 2: Inspect more detail of the dataset (slides 7 - 8 of the report.pdf)
