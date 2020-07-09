@@ -3,15 +3,19 @@
 ## Solution strategy (4D framework) for the data science problem
 <img src="/images/4Dframework.png" width = 1000>  
 
-## Define the problem and goal
+## 1- Define the problem and goal
 ### The problem
 The HR manager of a company wants to assign salaries to different posts within the company at the time of publicly advertising the posts. It is crucial that the salaries are within acceptable ranges for the benefit of the company so that the resources of company are not wasted.
   
 ### The goal
 The HR manager needs a model which is developed based on an available dataset to help them predict the salary of every post, in order to spend the resources of the company efficiently and create revenue for the company in the long term.  
   
-## Discover the data through EDA (Exploratory Data Analysis)
-### Step 1: Examining and high level overviewing the data (slides 5 - 6 of the report.pdf)
+## 2- Discover the data through EDA (Exploratory Data Analysis)
+### Step 1: Examining and high level overviewing the data
+<img src="/images/[4].png" width = 800>
+* The column ‘jobId’ seems to be a randomly generated number and hence unique.
+* The columns ‘companyId’, ‘jobType’, ‘degree’, ‘major’ and ‘industry’ seem to be categorical columns since there are some repetitions. Therefore, the number of unique categories for each column are expected to be much less than the total number of records.
+
 ### Step 2: Inspect more detail of the dataset (slides 7 - 8 of the report.pdf)
 * Total number of records: 1,000,000
 * The object columns are categorical.
