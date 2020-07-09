@@ -1,7 +1,7 @@
 # Salary Prediction
 
 ## Solution strategy (4D framework) for the data science problem
-<img src="/images/4Dframework.png" width = 400>
+<img src="/images/4Dframework.png" width = 800>  
 ![4D framework](/images/4Dframework.png)
 ## Define the problem and goal
 ### The problem
