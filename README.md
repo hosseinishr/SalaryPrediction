@@ -142,7 +142,7 @@ Inspection of these suspicious entries shows that these are primarily in oil, fi
 **This shows an inverse relationship between the miles from Metropolis and the salary, which makes perfect sense. Hence, 'milesFromMetropolis' has definitely impact on the target (salary) and will be kept as one of the features in the training dataset.**
 
 ### Step 2.8: Identification of correlation between all the features and target
-<img src="/images/[29].png" width = 1000>
+<img src="/images/[29].png" width = 700>
 
 
 * **The target variable ('salary') is correlated to all the features except 'companyId'. The correlation with 'companyId' is very weak compared to the rest of the features.**
