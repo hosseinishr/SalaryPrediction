@@ -171,7 +171,7 @@ The value of Mean Squared Error (MSE) of cross validation of the selected predic
 * Random Forest Regressor: 314.66
 * Gradient Boosting Regressor: 313.11
 
-The **Gradient Boosting Regressor** with the value of MSE of 313.11 (after cross validation with 50% of the training set) was considered as the best model and trained using the whole training set.
+The **Gradient Boosting Regressor** with the value of MSE of 313.11 (after cross validation with 50% of the training set) was considered as the best predictive model and trained using the whole training set.
 
 ## 4- Deploy the best predictive model
 ### Prediction of the salaries of the test dataset using the best model (The Gradient Boosting Regressor)
