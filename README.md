@@ -99,7 +99,7 @@ Inspection of these suspicious entries shows that these are primarily in oil, fi
 <img src="/images/[20].png" width = 800>
 
 ### Step 2.7: Plot all the features separately
-**correlation of 'companyId' and 'salary'**
+***correlation of 'companyId' and 'salary'***
 
 <img src="/images/[21].png" width = 800>
 
