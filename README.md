@@ -105,37 +105,37 @@ Inspection of these suspicious entries shows that these are primarily in oil, fi
 
 **The straight line shows 'companyId' is not predictive of the target, meaning the salaries are very weakly associated with these randomly generated numbers.**
 
-**correlation of 'jobType' and 'salary'**
+***correlation of 'jobType' and 'salary'***
 
 <img src="/images/[22].png" width = 800>
 
 **This shows that the higher the role, the more salary the person is earning, which is totally reasonable and believable. Hence, 'jobType' has definitely impact on the target (salary) and will be kept as one of the features in the training dataset.**
 
-**correlation of 'degree' and 'salary'**
+***correlation of 'degree' and 'salary'***
 
 <img src="/images/[23].png" width = 800>
 
 **This shows that the more the degree level, the more salary the person is earning, which is completely acceptable and makes sense. Hence, 'degree' has definitely impact on the target (salary) and will be kept as one of the features in the training dataset.**
 
-**correlation of 'major' and 'salary'**
+***correlation of 'major' and 'salary'***
 
 <img src="/images/[24].png" width = 800>
 
 **Apart from people with NONE major, the rest of the majors are earning pretty much the same salary. However, the salaries of engineering, business and maths are slightly higher than other majors. Hence, 'major' has impact on the target (salary) and will be kept as one of the features in the training dataset.**
 
-**correlation of 'industry' and 'salary'**
+***correlation of 'industry' and 'salary'***
 
 <img src="/images/[25].png" width = 800>
 
 **These 2 observations are reasonable and rational. This shows, as expected, that the oil, finance and web has highest salaries. Also, this shows that different industries have different salaries. Hence, 'industry' has definitely impact on the target (salary) and will be kept as one of the features in the training dataset.**
 
-**correlation of 'yearsExperience' and 'salary'**
+***correlation of 'yearsExperience' and 'salary'***
 
 <img src="/images/[26].png" width = 800>
 
 **This shows, as expected, that the more experience the person has, the more salary they earn, which is completely genuine and logical. Hence, 'yearsExperience' has definitely impact on the target (salary) and will be kept as one of the features in the training dataset.**
 
-**correlation of 'milesFromMetropolis' and 'salary'**
+***correlation of 'milesFromMetropolis' and 'salary'***
 
 <img src="/images/[27].png" width = 800>
 
